@@ -1,0 +1,31 @@
+syntax = "proto2";
+
+package system_specification;
+
+import "config.proto";
+
+message SystemPOUs {
+    repeated config.DataType system_pou = 1;
+}
+
+message SystemConfiguration {
+    optional string configuration_name = 1;
+    optional config.LogLevel log_level = 2;
+    optional string log_file_path = 3;
+    optional int32 run_time_secs = 4;
+    required HardwareSpecification hardware_spec = 5;
+    repeated config.DataType datatype_declaration = 6;
+    optional config.DataType var_global = 7;
+    optional config.DataType var_access = 8;
+    repeated string resource_file_path = 9;
+}
+
+
+message HardwareSpecification {
+    required int32 num_resources = 1;
+    required int64 ram_mem_size_bytes = 2;
+    optional int64 random_number_seed = 3;
+    repeated config.InstructionSpecification ins_spec = 4;
+    repeated config.SFCSpecification sfc_spec = 5;
+    repeated config.SFBSpecification sfb_spec = 6;
+}
