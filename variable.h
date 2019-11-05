@@ -127,6 +127,10 @@ class Variable {
     return mem_loc_;
   }
 
+  DataTypeFieldAttributes GetAttributes() {
+    return attrs_;
+  }
+
   void Cleanup();
 
   void AllocateStorage();

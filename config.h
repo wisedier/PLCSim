@@ -20,8 +20,8 @@ class Config {
   ResourceRegistry *registered_resource_{};
   int mem_size_{};
   MemUnit memory_;
-  std::string config_path_;
-  std::string config_name_;
+  std::string path_;
+  std::string name_;
   config::Specification spec_;
   std::unique_ptr<Variable> global_pou_var_;
   std::unique_ptr<Variable> access_pou_var_;
@@ -40,6 +40,10 @@ class Config {
   Config() = default;
 
   ~Config() = default;
+
+  std::string GetName() {
+    return name_;
+  }
 
   virtual DataType *LookupDataType(std::string name) = 0;
 

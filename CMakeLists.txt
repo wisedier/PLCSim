@@ -16,7 +16,7 @@ set(ProtobufTestsProtoSources
 
 set(ProtobufTestsSources
         library.cpp library.h mem_unit.h logger.h
-        ${ProtobufTestsProtoSources} datatype.h elementary_datatypes.h datatype_registry.h resource.h variable.h pou_container.h utils.h synchronized_queue.h executor.h clock.h task.h functions_registry.h kronos_api.h resource_registry.h config.h resource_manager.h sfb/tof.h instruction_registry.h sfb/sfb.h sfb/ton.h sfb/tp.h sfb_registry.h sfc/sfc.h sfc_registry.h)
+        ${ProtobufTestsProtoSources} datatype.h elementary_datatypes.h datatype_registry.h resource.h variable.h pou_container.h utils.h synchronized_queue.h executor.h clock.h task.h functions_registry.h kronos_api.h resource_registry.h config.h resource_manager.h sfb/tof.h instruction_registry.h sfb/sfb.h sfb/ton.h sfb/tp.h sfb_registry.h sfc/sfc.h sfc_registry.h resource_interface.h config_interface.h modules/actuator.h modules/module.h modules/communication.h modules/sensor.h grpc/api.h)
 
 PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS ${ProtobufTestsProtoSources})
 
