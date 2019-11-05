@@ -10,9 +10,9 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 include_directories(${PROJECT_SOURCE_DIR})
 
 set(ProtobufTestsProtoSources
-        config.proto
-        mem_access.proto
-        system_specification.proto)
+        proto/config.proto
+        proto/mem_access.proto
+        proto/system_specification.proto)
 
 set(ProtobufTestsSources
         library.cpp library.h mem_unit.h logger.h
